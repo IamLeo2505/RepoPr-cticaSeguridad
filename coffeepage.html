@@ -243,6 +243,24 @@ compartir con amigos, trabajar o simplemente disfrutar de un buen café.
 
 </section>
 
+<section>
+
+<h2>Lo que dicen nuestros clientes</h2>
+
+<div style="max-width:700px; margin:auto; text-align:center; background:white; padding:30px; border-radius:12px; box-shadow:0 5px 15px rgba(0,0,0,.15);">
+
+<p id="opinion" style="font-size:20px; font-style:italic; color:#555;">
+Haz clic en el botón para conocer la opinión de nuestros clientes.
+</p>
+
+<br>
+
+<button onclick="cambiarOpinion()">Mostrar Opinión</button>
+
+</div>
+
+</section>
+
 <footer>
 
 <p>© 2026 Café Aroma | Diseño Web HTML, CSS y JavaScript</p>
@@ -254,6 +272,22 @@ compartir con amigos, trabajar o simplemente disfrutar de un buen café.
 function mostrarMensaje(){
 
 alert("🎉 Promoción del día: ¡20% de descuento en cualquier bebida grande!");
+
+}
+
+const opiniones = [
+"⭐⭐⭐⭐⭐ Excelente café y muy buen ambiente.",
+"⭐⭐⭐⭐⭐ Los postres son deliciosos y el servicio es rápido.",
+"⭐⭐⭐⭐ Muy acogedor para trabajar o estudiar.",
+"⭐⭐⭐⭐⭐ El mejor cappuccino que he probado.",
+"⭐⭐⭐⭐ Muy buena atención y precios accesibles."
+];
+
+function cambiarOpinion(){
+
+let numero = Math.floor(Math.random() * opiniones.length);
+
+document.getElementById("opinion").textContent = opiniones[numero];
 
 }
 
